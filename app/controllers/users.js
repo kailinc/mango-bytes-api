@@ -44,9 +44,16 @@ const makeErrorHandler = (res, next) =>
       ? res.status(400).json({ error })
     : next(error)
 
+// edit to incorporate schemas
 const signup = (req, res, next) => {
   const credentials = req.body.credentials
-  const user = { email: credentials.email, password: credentials.password }
+  const user = {
+    firstName: credentials.firstName,
+    lastName: credentials.lastName,
+    coderName: credentials.coderName,
+    email: credentials.email,
+    password: credentials.password
+  }
   getToken()
     .then(token => {
       user.token = token
@@ -92,8 +99,50 @@ const signout = (req, res, next) => {
   ).catch(next)
 }
 
+const updateuser = (req, res, next) => {
+  const credentials = req.body.credentials
+  User.findOne({
+    _id: req.params.id,
+    token: req.user.token
+  }).then(user => {
+    user.firstName = credentials.firstName
+    user.lastName = credentials.lastName
+    user.coderName = credentials.coderName
+    user.devCred = credentials.devCred
+    user.fourScreens = credentials.fourScreens
+    user.javaScript = credentials.javaScript
+    user.python = credentials.python
+    user.angular = credentials.angular
+    user.bootStrap = credentials.bootStrap
+    user.c = credentials.c
+    user.cSharp = credentials.cSharp
+    user.cPlusPlus = credentials.cPlusPlus
+    user.css = credentials.css
+    user.django = credentials.django
+    user.ember = credentials.ember
+    user.go = credentials.go
+    user.html = credentials.html
+    user.java = credentials.java
+    user.mongoDB = credentials.mongoDB
+    user.mySQL = credentials.mySQL
+    user.node = credentials.node
+    user.rails = credentials.rails
+    user.react = credentials.react
+    user.ruby = credentials.ruby
+    user.sass = credentials.sass
+    user.walkingGoogle = credentials.walkingGoogle
+    user.docMaster = credentials.docMaster
+    user.bugSlayer = credentials.bugSlayer
+    user.steadyHands = credentials.steadyHands
+    user.fireFingers = credentials.fireFingers
+    user.coffeeATM = credentials.coffeeATM
+    return user.save()
+  }).then((/* user */) =>
+    res.sendStatus(204)
+  ).catch(makeErrorHandler(res, next))
+}
+
 const changepw = (req, res, next) => {
-  debug('Changing password')
   User.findOne({
     _id: req.params.id,
     token: req.user.token
@@ -114,7 +163,8 @@ module.exports = controller({
   signup,
   signin,
   signout,
-  changepw
+  changepw,
+  updateuser
 }, { before: [
   { method: authenticate, except: ['signup', 'signin'] }
 ] })

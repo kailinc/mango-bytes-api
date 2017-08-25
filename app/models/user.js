@@ -5,6 +5,129 @@ const mongoose = require('mongoose')
 const uniqueValidator = require('mongoose-unique-validator')
 
 const userSchema = new mongoose.Schema({
+  firstName: {
+    type: String,
+    required: true
+  },
+  lastName: {
+    type: String,
+    required: true
+  },
+  coderName: {
+    type: String
+  },
+  devCred: {
+    type: Number,
+    default: 0
+  },
+  fourScreens: {
+    type: Boolean,
+    default: false
+  },
+  javaScript: {
+    type: Number,
+    default: 0
+  },
+  python: {
+    type: Number,
+    default: 0
+  },
+  angular: {
+    type: Number,
+    default: 0
+  },
+  bootStrap: {
+    type: Number,
+    default: 0
+  },
+  c: {
+    type: Number,
+    default: 0
+  },
+  cSharp: {
+    type: Number,
+    default: 0
+  },
+  cPlusPlus: {
+    type: Number,
+    default: 0
+  },
+  css: {
+    type: Number,
+    default: 0
+  },
+  django: {
+    type: Number,
+    default: 0
+  },
+  ember: {
+    type: Number,
+    default: 0
+  },
+  go: {
+    type: Number,
+    default: 0
+  },
+  html: {
+    type: Number,
+    default: 0
+  },
+  java: {
+    type: Number,
+    default: 0
+  },
+  mongoDB: {
+    type: Number,
+    default: 0
+  },
+  mySQL: {
+    type: Number,
+    default: 0
+  },
+  node: {
+    type: Number,
+    default: 0
+  },
+  rails: {
+    type: Number,
+    default: 0
+  },
+  react: {
+    type: Number,
+    default: 0
+  },
+  ruby: {
+    type: Number,
+    default: 0
+  },
+  sass: {
+    type: Number,
+    default: 0
+  },
+  walkingGoogle: {
+    type: Boolean,
+    default: false
+  },
+  docMaster: {
+    type: Boolean,
+    default: false
+  },
+  bugSlayer: {
+    type: Boolean,
+    default: false
+  },
+  steadyHands: {
+    type: Boolean,
+    default: false
+  },
+  fireFingers: {
+    type: Boolean,
+    default: false
+  },
+  coffeeATM: {
+    type: Boolean,
+    default: false
+  },
   email: {
     type: String,
     unique: true,
