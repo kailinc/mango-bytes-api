@@ -99,8 +99,36 @@ const signout = (req, res, next) => {
   ).catch(next)
 }
 
+const updateuser = (req, res, next) => {
+  const credentials = req.body.credentials
+  const info = {
+    firstName: credentials.firstName,
+    lastName: credentials.lastName,
+    coderName: credentials.coderName,
+    devCred: credentials.devCred,
+    fourScreens: credentials.fourScreens,
+    attributes: credentials.attributes,
+    abilities: credentials.abilities
+  }
+
+  User.findOne({
+    _id: req.params.id,
+    token: req.user.token
+  }).then(user => {
+    user.firstName = info.firstName
+    user.lastName = info.lastName
+    user.coderName = info.coderName
+    user.devCred = info.devCred
+    user.fourScreens = info.fourScreens
+    user.attributes = info.attributes
+    user.abilities = info.abilities
+    return user.save()
+  }).then((/* user */) =>
+    res.sendStatus(204)
+  ).catch(makeErrorHandler(res, next))
+}
+
 const changepw = (req, res, next) => {
-  debug('Changing password')
   User.findOne({
     _id: req.params.id,
     token: req.user.token
@@ -121,7 +149,8 @@ module.exports = controller({
   signup,
   signin,
   signout,
-  changepw
+  changepw,
+  updateuser
 }, { before: [
   { method: authenticate, except: ['signup', 'signin'] }
 ] })
