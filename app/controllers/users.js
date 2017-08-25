@@ -101,27 +101,41 @@ const signout = (req, res, next) => {
 
 const updateuser = (req, res, next) => {
   const credentials = req.body.credentials
-  const info = {
-    firstName: credentials.firstName,
-    lastName: credentials.lastName,
-    coderName: credentials.coderName,
-    devCred: credentials.devCred,
-    fourScreens: credentials.fourScreens,
-    attributes: credentials.attributes,
-    abilities: credentials.abilities
-  }
-
   User.findOne({
     _id: req.params.id,
     token: req.user.token
   }).then(user => {
-    user.firstName = info.firstName
-    user.lastName = info.lastName
-    user.coderName = info.coderName
-    user.devCred = info.devCred
-    user.fourScreens = info.fourScreens
-    user.attributes = info.attributes
-    user.abilities = info.abilities
+    user.firstName = credentials.firstName
+    user.lastName = credentials.lastName
+    user.coderName = credentials.coderName
+    user.devCred = credentials.devCred
+    user.fourScreens = credentials.fourScreens
+    user.javaScript = credentials.javaScript
+    user.python = credentials.python
+    user.angular = credentials.angular
+    user.bootStrap = credentials.bootStrap
+    user.c = credentials.c
+    user.cSharp = credentials.cSharp
+    user.cPlusPlus = credentials.cPlusPlus
+    user.css = credentials.css
+    user.django = credentials.django
+    user.ember = credentials.ember
+    user.go = credentials.go
+    user.html = credentials.html
+    user.java = credentials.java
+    user.mongoDB = credentials.mongoDB
+    user.mySQL = credentials.mySQL
+    user.node = credentials.node
+    user.rails = credentials.rails
+    user.react = credentials.react
+    user.ruby = credentials.ruby
+    user.sass = credentials.sass
+    user.walkingGoogle = credentials.walkingGoogle
+    user.docMaster = credentials.docMaster
+    user.bugSlayer = credentials.bugSlayer
+    user.steadyHands = credentials.steadyHands
+    user.fireFingers = credentials.fireFingers
+    user.coffeeATM = credentials.coffeeATM
     return user.save()
   }).then((/* user */) =>
     res.sendStatus(204)
