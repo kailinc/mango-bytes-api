@@ -2,8 +2,9 @@
 FIRSTNAME='kai'
 LASTNAME='chen'
 CODERNAME='MudaBish'
-EMAIL='4@4'
-PASSWORD='4'
+EMAIL='11@11'
+PASSWORD='11'
+ATTRIBUTES= '{ "javaScript" : 10 }'
 API="http://localhost:4741"
 URL_PATH="/sign-up"
 
@@ -18,7 +19,8 @@ curl "${API}${URL_PATH}" \
       "coderName": "'"${CODERNAME}"'",
       "email": "'"${EMAIL}"'",
       "password": "'"${PASSWORD}"'",
-      "password_confirmation": "'"${PASSWORD}"'"
+      "password_confirmation": "'"${PASSWORD}"'",
+      "attributes": "'"${ATTRIBUTES}"'"
     }
   }'
 
