@@ -106,6 +106,32 @@ const userSchema = new mongoose.Schema({
       default: 0
     }
   },
+  abilities: {
+    walkingGoogle: {
+      type: Boolean,
+      default: false
+    },
+    docMaster: {
+      type: Boolean,
+      default: false
+    },
+    bugSlayer: {
+      type: Boolean,
+      default: false
+    },
+    steadyHands: {
+      type: Boolean,
+      default: false
+    },
+    fireFingers: {
+      type: Boolean,
+      default: false
+    },
+    coffeeATM: {
+      type: Boolean,
+      default: false
+    }
+  },
   email: {
     type: String,
     unique: true,
