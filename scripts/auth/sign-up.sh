@@ -2,8 +2,8 @@
 FIRSTNAME='kai'
 LASTNAME='chen'
 CODERNAME='MudaBish'
-EMAIL='9@9'
-PASSWORD='9'
+EMAIL='5@5'
+PASSWORD='5'
 API="http://localhost:4741"
 URL_PATH="/sign-up"
 

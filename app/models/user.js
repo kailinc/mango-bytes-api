@@ -20,6 +20,92 @@ const userSchema = new mongoose.Schema({
     type: Number,
     default: 0
   },
+  fourScreens: {
+    type: Boolean,
+    default: false
+  },
+  attributes: {
+    javaScript: {
+      type: Number,
+      default: 0
+    },
+    python: {
+      type: Number,
+      default: 0
+    },
+    angular: {
+      type: Number,
+      default: 0
+    },
+    bootStrap: {
+      type: Number,
+      default: 0
+    },
+    c: {
+      type: Number,
+      default: 0
+    },
+    cSharp: {
+      type: Number,
+      default: 0
+    },
+    cPlusPlus: {
+      type: Number,
+      default: 0
+    },
+    css: {
+      type: Number,
+      default: 0
+    },
+    django: {
+      type: Number,
+      default: 0
+    },
+    ember: {
+      type: Number,
+      default: 0
+    },
+    go: {
+      type: Number,
+      default: 0
+    },
+    html: {
+      type: Number,
+      default: 0
+    },
+    java: {
+      type: Number,
+      default: 0
+    },
+    mongoDB: {
+      type: Number,
+      default: 0
+    },
+    mySQL: {
+      type: Number,
+      default: 0
+    },
+    node: {
+      type: Number,
+      default: 0
+    },
+    rails: {
+      type: Number,
+      default: 0
+    },
+    react: {
+      type: Number,
+      default: 0
+    },
+    ruby: {
+      type: Number,
+      default: 0
+    },
+    sass: {
+      type: Number,
+      default: 0
+    }
+  },
   email: {
     type: String,
     unique: true,
