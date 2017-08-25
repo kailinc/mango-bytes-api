@@ -10,50 +10,32 @@ const index = (req, res, next) => {
   Item.find()
     .then(items => res.json({
       items: items.map((e) =>
-        e.toJSON({ virtuals: true, user: req.user }))
+        e.toJSON({ virtuals: true }))
     }))
     .catch(next)
 }
 
 const show = (req, res) => {
   res.json({
-    item: req.item.toJSON({ virtuals: true, user: req.user })
+    item: req.item.toJSON({ virtuals: true })
   })
 }
 
 const create = (req, res, next) => {
-  const item = Object.assign(req.body.item, {
-    _owner: req.user._id
-  })
+  const item = Object.assign(req.body.item)
   Item.create(item)
     .then(item =>
       res.status(201)
         .json({
-          item: item.toJSON({ virtuals: true, user: req.user })
+          item: item.toJSON()
         }))
-    .catch(next)
-}
-
-const update = (req, res, next) => {
-  delete req.body._owner  // disallow owner reassignment.
-  req.item.update(req.body.item)
-    .then(() => res.sendStatus(204))
-    .catch(next)
-}
-
-const destroy = (req, res, next) => {
-  req.item.remove()
-    .then(() => res.sendStatus(204))
     .catch(next)
 }
 
 module.exports = controller({
   index,
   show,
-  create,
-  update,
-  destroy
+  create
 }, { before: [
-  { method: setModel(Item), only: ['show'] },
-  { method: setModel(Item, { forUser: true }), only: ['update', 'destroy'] }
+  { method: setModel(Item), only: ['show'] }
 ] })

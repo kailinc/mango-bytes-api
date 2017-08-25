@@ -3,29 +3,44 @@
 const mongoose = require('mongoose')
 
 const itemSchema = new mongoose.Schema({
-  text: {
+  name: {
     type: String,
     required: true
   },
-  _owner: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
+  des: {
+    type: String,
+    required: true
+  },
+  img: {
+    type: String,
+    required: true
+  },
+  type: {
+    type: String,
+    required: true
+  },
+  category: [String],
+  basePrice: {
+    type: Number,
+    required: true
+  },
+  stock: {
+    type: Number,
+    required: true
+  },
+  attributes: [{ attribute: String, quantity: Number }],
+  devCred: {
+    type: Number,
     required: true
   }
 }, {
   timestamps: true,
   toJSON: {
-    virtuals: true,
+    virtuals: false,
     transform: function (doc, ret, options) {
-      const userId = (options.user && options.user._id) || false
-      ret.editable = userId && userId.equals(doc._owner)
       return ret
     }
   }
-})
-
-itemSchema.virtual('length').get(function length () {
-  return this.text.length
 })
 
 const Item = mongoose.model('Item', itemSchema)

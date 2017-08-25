@@ -18,5 +18,7 @@ module.exports = require('lib/wiring/routes')
 .patch('/update-user/:id', 'users#updateuser')
 .resources('users', { only: ['index', 'show'] })
 
-// standards RESTful routes
-.resources('items')
+// routes for items
+.get('/items', 'items#index')
+.get('/items/:id', 'items#show')
+.post('/items', 'items#create')
