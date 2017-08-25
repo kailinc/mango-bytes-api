@@ -44,9 +44,16 @@ const makeErrorHandler = (res, next) =>
       ? res.status(400).json({ error })
     : next(error)
 
+// edit to incorporate schemas
 const signup = (req, res, next) => {
   const credentials = req.body.credentials
-  const user = { email: credentials.email, password: credentials.password }
+  const user = {
+    firstName: credentials.firstName,
+    lastName: credentials.lastName,
+    coderName: credentials.coderName,
+    email: credentials.email,
+    password: credentials.password
+  }
   getToken()
     .then(token => {
       user.token = token
