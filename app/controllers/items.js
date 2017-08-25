@@ -2,14 +2,14 @@
 
 const controller = require('lib/wiring/controller')
 const models = require('app/models')
-const Example = models.example
+const Item = models.item
 
 const setModel = require('./concerns/set-mongoose-model')
 
 const index = (req, res, next) => {
-  Example.find()
-    .then(examples => res.json({
-      examples: examples.map((e) =>
+  Item.find()
+    .then(items => res.json({
+      items: items.map((e) =>
         e.toJSON({ virtuals: true, user: req.user }))
     }))
     .catch(next)
@@ -17,32 +17,32 @@ const index = (req, res, next) => {
 
 const show = (req, res) => {
   res.json({
-    example: req.example.toJSON({ virtuals: true, user: req.user })
+    item: req.item.toJSON({ virtuals: true, user: req.user })
   })
 }
 
 const create = (req, res, next) => {
-  const example = Object.assign(req.body.example, {
+  const item = Object.assign(req.body.item, {
     _owner: req.user._id
   })
-  Example.create(example)
-    .then(example =>
+  Item.create(item)
+    .then(item =>
       res.status(201)
         .json({
-          example: example.toJSON({ virtuals: true, user: req.user })
+          item: item.toJSON({ virtuals: true, user: req.user })
         }))
     .catch(next)
 }
 
 const update = (req, res, next) => {
   delete req.body._owner  // disallow owner reassignment.
-  req.example.update(req.body.example)
+  req.item.update(req.body.item)
     .then(() => res.sendStatus(204))
     .catch(next)
 }
 
 const destroy = (req, res, next) => {
-  req.example.remove()
+  req.item.remove()
     .then(() => res.sendStatus(204))
     .catch(next)
 }
@@ -54,6 +54,6 @@ module.exports = controller({
   update,
   destroy
 }, { before: [
-  { method: setModel(Example), only: ['show'] },
-  { method: setModel(Example, { forUser: true }), only: ['update', 'destroy'] }
+  { method: setModel(Item), only: ['show'] },
+  { method: setModel(Item, { forUser: true }), only: ['update', 'destroy'] }
 ] })

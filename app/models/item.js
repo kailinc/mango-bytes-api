@@ -2,7 +2,7 @@
 
 const mongoose = require('mongoose')
 
-const exampleSchema = new mongoose.Schema({
+const itemSchema = new mongoose.Schema({
   text: {
     type: String,
     required: true
@@ -24,10 +24,10 @@ const exampleSchema = new mongoose.Schema({
   }
 })
 
-exampleSchema.virtual('length').get(function length () {
+itemSchema.virtual('length').get(function length () {
   return this.text.length
 })
 
-const Example = mongoose.model('Example', exampleSchema)
+const Item = mongoose.model('Item', itemSchema)
 
-module.exports = Example
+module.exports = Item
