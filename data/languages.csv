@@ -1,21 +1,21 @@
 name,stock,devCred,type,basePrice,attributes,category,des,img
-javaScript,10000,100,skills,5,javaScript+2,javaScript,loream ipson,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/js.png
-python,10000,100,skills,5,python+2,python,loream ipson,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/python.png
-angular,10000,100,skills,3,angular+2 javaScript+1,angular javaScript,loream ipson,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/angular.png
-bootStrap,10000,100,skills,3,bootStrap+2 html+1 css+1 sass+1,bootStrap html css,loream ipson,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/bootstrap.png
-c,10000,100,skills,5,c+2,c,loream ipson,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/c.png
-cSharp,10000,100,skills,5,cSharp+2,cSharp,loream ipson,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/c%23.png
-cPlusPlus,10000,100,skills,5,cPlusPlus+2,cPlusPlus,loream ipson,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/c%2B%2B.png
-css,10000,100,skills,5,css+2,css,loream ipson,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/css.png
-django,10000,100,skills,3,django+2 python+1,django python,loream ipson,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/django.png
-ember,10000,100,skills,3,ember+2 javaScript+1,ember javaScript,loream ipson,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/ember.png
-go,10000,100,skills,5,go+2,go,loream ipson,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/go.png
-html,10000,100,skills,5,html+2 css+1,html css,loream ipson,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/html5.png
-java,10000,100,skills,5,java+2,java,loream ipson,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/java.png
-mongoDB,10000,100,skills,3,mongoDB+2 javaScript+1 mySQL+1,mongoDB javaScript,loream ipson,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/mongodb.png
-mySQL,10000,100,skills,3,mySQL+2 ruby+1 rails+1,mySQL ruby rails,loream ipson,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/mysql.jpg
-node,10000,100,skills,3,node+2 javaScript+1,node javaScript,loream ipson,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/node.jpg
-rails,10000,100,skills,3,rails+2 ruby+1,rails ruby,loream ipson,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/rails.jpg
-react,10000,100,skills,3,react+2 javaScript+1,react javaScript,loream ipson,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/react.png
-ruby,10000,100,skills,5,ruby+2 rails+1,ruby rails,loream ipson,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/ruby.png
-sass,10000,100,skills,3,sass+2 html+1 css+1,sass html css bootStrap,loream ipson,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/sass.png
+javaScript,10000,100,skills,5,javaScript+2,javaScript,An object-oriented computer programming language commonly used to create interactive effects within web browsers,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/js.png
+python,10000,100,skills,5,python+2,python,a high-level general-purpose programming language,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/python.png
+angular,10000,100,skills,3,angular+2 javaScript+1,angular javaScript,structural framework for dynamic web apps,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/angular.png
+bootStrap,10000,100,skills,3,bootStrap+2 html+1 css+1 sass+1,bootStrap html css,a free and open-source front-end web framework for designing websites and web applications,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/bootstrap.png
+c,10000,100,skills,5,c+2,c,a computer programming language,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/c.png
+cSharp,10000,100,skills,5,cSharp+2,cSharp,an object-oriented programming language from Microsoft that aims to combine the computing power of C++ with the programming ease of Visual Basic,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/c%23.png
+cPlusPlus,10000,100,skills,5,cPlusPlus+2,cPlusPlus,a general-purpose programming language,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/c%2B%2B.png
+css,10000,100,skills,5,css+2,css,the language for describing the presentation of Web pages,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/css.png
+django,10000,100,skills,3,django+2 python+1,django python,a high-level Python Web framework that encourages rapid development and clean pragmatic design,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/django.png
+ember,10000,100,skills,3,ember+2 javaScript+1,ember javaScript,is an open-source JavaScript web framework based on the Model–view–viewmodel (MVVM) pattern,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/ember.png
+go,10000,100,skills,5,go+2,go,a free and open source programming language created at Google,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/go.png
+html,10000,100,skills,5,html+2 css+1,html css,the standard markup language for creating web pages and web applications,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/html5.png
+java,10000,100,skills,5,java+2,java, general-purpose computer programming language that is  specifically designed to have as few implementation dependencies as possible,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/java.png
+mongoDB,10000,100,skills,3,mongoDB+2 javaScript+1 mySQL+1,mongoDB javaScript,a free and open-source cross-platform document-oriented database program,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/mongodb.png
+mySQL,10000,100,skills,3,mySQL+2 ruby+1 rails+1,mySQL ruby rails,an open source relational database management system (RDBMS) based on Structured Query Language (SQL),https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/mysql.jpg
+node,10000,100,skills,3,node+2 javaScript+1,node javaScript,a platform built on Chrome's JavaScript runtime for easily building fast and scalable network applications,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/node.jpg
+rails,10000,100,skills,3,rails+2 ruby+1,rails ruby,a server-side web application framework written in Ruby under the MIT License,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/rails.jpg
+react,10000,100,skills,3,react+2 javaScript+1,react javaScript, an efficient JavaScript library for building user interfaces,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/react.png
+ruby,10000,100,skills,5,ruby+2 rails+1,ruby rails,an object-oriented and general-purpose programming language,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/ruby.png
+sass,10000,100,skills,3,sass+2 html+1 css+1,sass html css bootStrap,a scripting language that is interpreted or compiled into Cascading Style Sheets,https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/sass.png
