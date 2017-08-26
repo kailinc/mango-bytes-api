@@ -1,2 +1,21 @@
-title,author,published_on
-1984,George Orwell,2000-11-21
+name,stock,devCred,type,basePrice,attributes,category,des,img
+javaScript,10000,100,skills,5,javaScript+2,javaScript,loream ipson,aws site
+python,10000,100,skills,5,python+2,python,loream ipson,aws site
+angular,10000,100,skills,3,angular+2 javaScript+1,angular javaScript,loream ipson,aws site
+bootStrap,10000,100,skills,3,bootStrap+2 html+1 css+1 sass+1,bootStrap html css,loream ipson,aws site
+c,10000,100,skills,5,c+2,c,loream ipson,aws site
+cSharp,10000,100,skills,5,cSharp+2,cSharp,loream ipson,aws site
+cPlusPlus,10000,100,skills,5,cPlusPlus+2,cPlusPlus,loream ipson,aws site
+css,10000,100,skills,5,css+2,css,loream ipson,aws site
+django,10000,100,skills,3,django+2 python+1,django python,loream ipson,aws site
+ember,10000,100,skills,3,ember+2 javaScript+1,ember javaScript,loream ipson,aws site
+go,10000,100,skills,5,go+2,go,loream ipson,aws site
+html,10000,100,skills,5,html+2 css+1,html css,loream ipson,aws site
+java,10000,100,skills,5,java+2,java,loream ipson,aws site
+mongoDB,10000,100,skills,3,mongoDB+2 javaScript+1 mySQL+1,mongoDB javaScript,loream ipson,aws site
+mySQL,10000,100,skills,3,mySQL+2 ruby+1 rails+1,mySQL ruby rails,loream ipson,aws site
+node,10000,100,skills,3,node+2 javaScript+1,node javaScript,loream ipson,aws site
+rails,10000,100,skills,3,rails+2 ruby+1,rails ruby,loream ipson,aws site
+react,10000,100,skills,3,react+2 javaScript+1,react javaScript,loream ipson,aws site
+ruby,10000,100,skills,5,ruby+2 rails+1,ruby rails,loream ipson,aws site
+sass,10000,100,skills,3,sass+2 html+1 css+1,sass html css bootStrap,loream ipson,aws site

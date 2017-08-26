@@ -19,7 +19,10 @@ const itemSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  category: [String],
+  category: {
+    type: String,
+    required: true
+  },
   basePrice: {
     type: Number,
     required: true
@@ -28,7 +31,10 @@ const itemSchema = new mongoose.Schema({
     type: Number,
     required: true
   },
-  attributes: [{ attribute: String, quantity: Number }],
+  attributes: {
+    type: String,
+    required: true
+  },
   devCred: {
     type: Number,
     required: true

@@ -1,2 +1,2 @@
 # bulk load data
-mongoimport --db=mongo-crud --collection=books --type=csv --headerline --file=data/books.csv --drop
+mongoimport --db=mango-bytes-api-development --collection=items --type=csv --headerline --file=data/languages.csv --drop
