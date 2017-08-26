@@ -21,21 +21,9 @@ const show = (req, res) => {
   })
 }
 
-const create = (req, res, next) => {
-  const item = Object.assign(req.body.item)
-  Item.create(item)
-    .then(item =>
-      res.status(201)
-        .json({
-          item: item.toJSON()
-        }))
-    .catch(next)
-}
-
 module.exports = controller({
   index,
-  show,
-  create
+  show
 }, { before: [
   { method: setModel(Item), only: ['show'] }
 ] })

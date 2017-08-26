@@ -21,4 +21,3 @@ module.exports = require('lib/wiring/routes')
 // routes for items
 .get('/items', 'items#index')
 .get('/items/:id', 'items#show')
-.post('/items', 'items#create')
