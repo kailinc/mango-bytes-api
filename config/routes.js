@@ -23,7 +23,4 @@ module.exports = require('lib/wiring/routes')
 .get('/items/:id', 'items#show')
 
 // standards RESTful for carts
-.get('/carts', 'carts#index')
-.get('/carts/:id', 'carts#show')
-.post('/carts', 'carts#create')
-.patch('/carts/:id', 'carts#update')
+.resources('carts')
