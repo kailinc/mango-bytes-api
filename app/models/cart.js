@@ -14,6 +14,10 @@ const cartSchema = new mongoose.Schema({
       min: 0
     }
   }],
+  isPaid: {
+    type: Boolean,
+    default: false
+  },
   _owner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
