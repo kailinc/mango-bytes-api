@@ -25,9 +25,14 @@ const cartSchema = new mongoose.Schema({
   }
 })
 
-// cartSchema.virtual('length').get(function length () {
-//   return this.text.length
-// })
+cartSchema.virtual('totalPrice').get(function length () {
+  const productList = this.products
+  let total = 0
+  for (let i = 0; i < productList.length; i++) {
+    total += productList[i].price
+  }
+  return total
+})
 
 const Cart = mongoose.model('Cart', cartSchema)
 
