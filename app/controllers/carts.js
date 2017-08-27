@@ -24,6 +24,7 @@ const show = (req, res) => {
 }
 
 const create = (req, res, next) => {
+  // req.body.cart.nested.stuff = 'ok'
   const cart = Object.assign(req.body.cart, {
     _owner: req.user._id
   })
