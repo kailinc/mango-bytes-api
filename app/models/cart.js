@@ -5,8 +5,14 @@ const mongoose = require('mongoose')
 const cartSchema = new mongoose.Schema({
   products: [{
     item_id: mongoose.Schema.Types.ObjectId,
-    quantity: Number,
-    price: Number
+    quantity: {
+      type: Number,
+      min: 0
+    },
+    price: {
+      type: Number,
+      min: 0
+    }
   }],
   _owner: {
     type: mongoose.Schema.Types.ObjectId,

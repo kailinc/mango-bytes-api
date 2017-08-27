@@ -11,7 +11,7 @@ curl "${API}${URL_PATH}" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
     "cart": {
-      "products": [{"item_id": "59a197c79f399e9a7f9725af", "quantity": "20", "price": "1"}, {"item_id": "59a197c79f399e9a7f9725b0", "quantity": "30", "price": "10"}]
+      "products": [{"item_id": "59a197c79f399e9a7f9725af", "quantity": "1", "price": "-1"}, {"item_id": "59a197c79f399e9a7f9725b0", "quantity": "30", "price": "10"}]
     }
   }'
 
