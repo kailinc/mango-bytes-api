@@ -111,12 +111,7 @@ const updateuser = (req, res, next) => {
     user.devCred = credentials.devCred
     user.fourScreens = credentials.fourScreens
     user.skills = credentials.skills
-    user.walkingGoogle = credentials.walkingGoogle
-    user.docMaster = credentials.docMaster
-    user.bugSlayer = credentials.bugSlayer
-    user.steadyHands = credentials.steadyHands
-    user.fireFingers = credentials.fireFingers
-    user.coffeeATM = credentials.coffeeATM
+    user.powers = credentials.powers
     return user.save()
   }).then((/* user */) =>
     res.sendStatus(204)

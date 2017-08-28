@@ -1,9 +1,9 @@
 #!/bin/bash
-FIRSTNAME='l'
-LASTNAME='l'
-CODERNAME='l'
-EMAIL='l@l'
-PASSWORD='l'
+FIRSTNAME='p'
+LASTNAME='p'
+CODERNAME='p'
+EMAIL='p@p'
+PASSWORD='p'
 API="http://localhost:4741"
 URL_PATH="/sign-up"
 

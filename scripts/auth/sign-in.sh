@@ -1,6 +1,6 @@
 #!/bin/bash
-EMAIL='l@l'
-PASSWORD='l'
+EMAIL='p@p'
+PASSWORD='p'
 API="http://localhost:4741"
 URL_PATH="/sign-in"
 
