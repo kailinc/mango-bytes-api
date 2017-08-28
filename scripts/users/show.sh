@@ -1,8 +1,8 @@
 #!/bin/bash
-ID='59a062420a980b1b7cd0b45a'
+ID='59a45454be19d314e72d546f'
 API="http://localhost:4741"
 URL_PATH="/users"
-TOKEN='htAlRPwsY+CaOKoaq6354LYhcy7XvH+aIiiLTioKOyg=--1DM6dWp80+tzNr9MvHDqT97hqzqT4yhkve44tZ3jBq4='
+TOKEN='YnqRayHAB2k+1XElFVN9ohnizwY3na9nlasy3xpZmcE=--hQZTNbnzLU1BaWMvXZ9sp9qHgAAV+qbNcok85x2y2uw='
 
 curl "${API}${URL_PATH}/${ID}" \
   --include \
