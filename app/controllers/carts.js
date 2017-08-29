@@ -23,6 +23,15 @@ const show = (req, res) => {
   })
 }
 
+// const currentcart = (req, res, next) => {
+//   Cart.find({paid: false})
+//     .then(carts => res.json({
+//       carts: carts.map((e) =>
+//         e.toJSON({ virtuals: true, user: req.user }))
+//     }))
+//     .catch(next)
+// }
+
 const create = (req, res, next) => {
   // req.body.cart.nested.stuff = 'ok'
   const cart = Object.assign(req.body.cart, {
