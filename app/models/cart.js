@@ -12,6 +12,11 @@ const cartSchema = new mongoose.Schema({
     price: {
       type: Number,
       min: 0
+    },
+    devCred: {
+      type: Number,
+      require: true,
+      min: 0
     }
   }],
   isPaid: {
@@ -40,6 +45,15 @@ cartSchema.virtual('totalPrice').get(function length () {
   let total = 0
   for (let i = 0; i < productList.length; i++) {
     total += productList[i].price
+  }
+  return total
+})
+
+cartSchema.virtual('totalDevCred').get(function length () {
+  const productList = this.products
+  let total = 0
+  for (let i = 0; i < productList.length; i++) {
+    total += productList[i].devCred
   }
   return total
 })
