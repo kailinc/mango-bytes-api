@@ -11,7 +11,7 @@ curl "${API}${URL_PATH}" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
     "cart": {
-      "products": [{"item": "59a197c79f399e9a7f9725b0", "quantity": "99", "name": "javaScript", "img": "https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/js.png", "devCred": "100", "basePrice": "5", "attributes": "javaScript+2" }]
+      "products": [{"item": "59a197c79f399e9a7f9725af", "quantity": "99", "name": "javaScript", "img": "https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/js.png", "devCred": "100", "basePrice": "5", "attributes": "javaScript+2" }, {"item": "59a197c79f399e9a7f9725b0", "quantity": "2", "name": "javaScript", "img": "https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/python.png", "devCred": "100", "basePrice": "5", "attributes": "python+2" }]
     }
   }'
 
