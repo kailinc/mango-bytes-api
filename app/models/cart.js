@@ -4,19 +4,34 @@ const mongoose = require('mongoose')
 
 const cartSchema = new mongoose.Schema({
   products: [{
-    item_id: mongoose.Schema.Types.ObjectId,
+    item: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Item',
+      required: true
+    },
     quantity: {
       type: Number,
       min: 0
     },
-    price: {
-      type: Number,
-      min: 0
+    name: {
+      type: String,
+      required: true
+    },
+    img: {
+      type: String,
+      required: true
+    },
+    attributes: {
+      type: String,
+      required: true
+    },
+    basePrice: {
+      type: String,
+      required: true
     },
     devCred: {
-      type: Number,
-      require: true,
-      min: 0
+      type: String,
+      required: true
     }
   }],
   isPaid: {
@@ -40,23 +55,23 @@ const cartSchema = new mongoose.Schema({
   }
 })
 
-cartSchema.virtual('totalPrice').get(function length () {
-  const productList = this.products
-  let total = 0
-  for (let i = 0; i < productList.length; i++) {
-    total += productList[i].price
-  }
-  return total
-})
-
-cartSchema.virtual('totalDevCred').get(function length () {
-  const productList = this.products
-  let total = 0
-  for (let i = 0; i < productList.length; i++) {
-    total += productList[i].devCred
-  }
-  return total
-})
+// cartSchema.virtual('totalPrice').get(function length () {
+//   const productList = this.products
+//   let total = 0
+//   for (let i = 0; i < productList.length; i++) {
+//     total += productList[i].price
+//   }
+//   return total
+// })
+//
+// cartSchema.virtual('totalDevCred').get(function length () {
+//   const productList = this.products
+//   let total = 0
+//   for (let i = 0; i < productList.length; i++) {
+//     total += productList[i].devCred
+//   }
+//   return total
+// })
 
 const Cart = mongoose.model('Cart', cartSchema)
 

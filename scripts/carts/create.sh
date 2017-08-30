@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TOKEN='M03gNqv6t0xNW96A6iNMWjyOvXMMcL1W2zvXwMYMPlE=--d4iS6pk8tGw/QL24yK9HETH12Hq9LXU18MFBhKbcMPk='
+TOKEN='mxdMLy1IvY7WZhBuf8bAp1OaMSY49rml9Rp5HGl2Cxw=--qf3W8b4L3DrlhiMOtEtTMZIRBFj8JNrOHd5g9eSvWaU='
 API="http://localhost:4741"
 URL_PATH="/carts"
 
@@ -11,7 +11,7 @@ curl "${API}${URL_PATH}" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
     "cart": {
-      "products": [{"item_id": "59a197c79f399e9a7f9725b0", "quantity": "300", "price": "100", "devCred": "100"}, {"item_id": "59a197c79f399e9a7f9725b0", "quantity": "300", "price": "100", "devCred": "200"}]
+      "products": [{"item": "59a197c79f399e9a7f9725b0", "quantity": "99", "name": "javaScript", "img": "https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/js.png", "devCred": "100", "basePrice": "5", "attributes": "javaScript+2" }]
     }
   }'
 

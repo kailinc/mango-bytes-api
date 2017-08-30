@@ -23,28 +23,31 @@ const show = (req, res) => {
   })
 }
 
-// const currentcart = (req, res, next) => {
-//   Cart.find({paid: false})
-//     .then(carts => res.json({
-//       carts: carts.map((e) =>
-//         e.toJSON({ virtuals: true, user: req.user }))
-//     }))
-//     .catch(next)
-// }
-
 const create = (req, res, next) => {
   // req.body.cart.nested.stuff = 'ok'
   const cart = Object.assign(req.body.cart, {
     _owner: req.user._id
   })
   Cart.create(cart)
-    .then(cart =>
+    .then(cart => {
       res.status(201)
         .json({
           cart: cart.toJSON({ virtuals: true, user: req.user })
-        }))
+        })
+    })
     .catch(next)
 }
+
+// post.save(function(error) {
+//     if (!error) {
+//         Post.find({})
+//             .populate('postedBy')
+//             .populate('comments.postedBy')
+//             .exec(function(error, posts) {
+//                 console.log(JSON.stringify(posts, null, "\t"))
+//             })
+//     }
+// });
 
 const update = (req, res, next) => {
   delete req.body._owner  // disallow owner reassignment.

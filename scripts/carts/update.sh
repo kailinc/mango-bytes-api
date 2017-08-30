@@ -1,6 +1,6 @@
 #!/bin/bash
-TOKEN='x+H8wci5MO/UpAbll0dbEl3/gwJW+AmhBQy47HbCBM=--+i3EGuBKKGJNl5dY1kWSnxVQUOTiOq6yuyXJx47Cqsc='
-ID='59a1b16c1236ed66d04203c8'
+TOKEN='8mgaevie6kzhh7CQzhxCmfvptmLQzEyiKZz/yHfvbX0=--kivGfRggidfPfpuzKU2MD3w+ncWfyhKlHkd/PX75CeE='
+ID='59a57f0750c71d5a4eff9836'
 API="http://localhost:4741"
 URL_PATH="/carts"
 
@@ -11,7 +11,8 @@ curl "${API}${URL_PATH}/${ID}" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
     "cart": {
-      "products": [{"item_id": "59a197c79f399e9a7f9725b0", "quantity": "300", "price": "10"}]
+      "products": [{"item_id": "59a197c79f399e9a7f9725b0", "quantity": "300", "price": "10"}],
+      "isPaid": "true"
     }
   }'
 
