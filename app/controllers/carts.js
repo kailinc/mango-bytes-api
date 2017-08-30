@@ -50,6 +50,12 @@ const create = (req, res, next) => {
 // });
 
 const update = (req, res, next) => {
+  console.log('cart is', req.cart)
+  // const itemId = req.body.cart.products[0].item
+  // Item.findById(itemId)
+  //   .then((item) => function () {
+  //     req.cart.products.push(item)
+  //   })
   delete req.body._owner  // disallow owner reassignment.
   req.cart.update(req.body.cart)
     .then(() => res.sendStatus(204))
