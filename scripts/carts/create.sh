@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TOKEN='Ky8Tz1FZfhWfbeL83q23H3ZHoTrurrAm/LIKI23RRus=--L/ukz79kMBQ1qH7DijplVEIqkBv9kGLGaft7L9YS2lc='
+TOKEN='BseBu76jnzgBP1PMu1RgI6L4T2uRyFLKm6wiYufNxKg=--5mgITLr/mDtD1lfhXDiknVNKcqCY9MmT/HHSn+x5VTQ='
 API="http://localhost:4741"
 URL_PATH="/carts"
 

@@ -56,6 +56,14 @@ const update = (req, res, next) => {
   //   .then((item) => function () {
   //     req.cart.products.push(item)
   //   })
+  for (let i = 0; i < req.body.cart.products.length; i++) {
+    for (let key in req.body.cart.products[i]) {
+      if (key === '_id') {
+        delete req.body.cart.products[i]['_id']
+      }
+    }
+  }
+
   delete req.body._owner  // disallow owner reassignment.
   req.cart.update(req.body.cart)
     .then(() => res.sendStatus(204))
