@@ -1,34 +1,34 @@
 #!/bin/bash
 
-NAME='JavaScript'
-DES='learn the mysterious power of this mystic power'
-IMG='df'
-TYPE='EXP'
-STOCK=100
-DEVCRED=10
-BASEPRICE=10
-CATEGORY='APPLE, sdfs, sfs, sfds'
-ATTRIBUTES='javaScript+2'
+NAME='sass'
+STOCK=10000
+DEVCRED=100
+TYPE='skills'
+BASEPRICE=5
+ATTRIBUTES='sass+2 html+1 css+1'
+CATEGORY='sass html css bootStrap'
+DES='a scripting language that is interpreted or compiled into Cascading Style Sheets'
+IMG='https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/sass.png'
 
-API="http://localhost:4741"
-URL_PATH="/items"
 
-curl "${API}${URL_PATH}" \
+
+API="https://damp-hamlet-57878.herokuapp.com/items"
+
+curl "${API}" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \
   --data '{
     "item": {
       "name": "'"${NAME}"'",
-      "des": "'"${DES}"'",
-      "img": "'"${IMG}"'",
-      "type": "'"${TYPE}"'",
-      "basePrice": "'"${BASEPRICE}"'",
       "stock": "'"${STOCK}"'",
       "devCred": "'"${DEVCRED}"'",
+      "type": "'"${TYPE}"'",
+      "basePrice": "'"${BASEPRICE}"'",
+      "attributes": "'"${ATTRIBUTES}"'",
       "category": "'"${CATEGORY}"'",
-      "attributes": "'"${ATTRIBUTES}"'"
-
+      "des": "'"${DES}"'",
+      "img": "'"${IMG}"'"
     }
   }'
 
