@@ -21,9 +21,23 @@ const show = (req, res) => {
   })
 }
 
+const create = (req, res, next) => {
+  // req.body.cart.nested.stuff = 'ok'
+  const item = Object.assign(req.body.item)
+  Item.create(item)
+    .then(cart => {
+      res.status(201)
+        .json({
+          cart: cart.toJSON()
+        })
+    })
+    .catch(next)
+}
+
 module.exports = controller({
   index,
-  show
+  show,
+  create
 }, { before: [
   { method: setModel(Item), only: ['show'] }
 ] })

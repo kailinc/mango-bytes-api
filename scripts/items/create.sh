@@ -8,7 +8,7 @@ STOCK=100
 DEVCRED=10
 BASEPRICE=10
 CATEGORY='APPLE, sdfs, sfs, sfds'
-
+ATTRIBUTES='javaScript+2'
 
 API="http://localhost:4741"
 URL_PATH="/items"
@@ -26,7 +26,8 @@ curl "${API}${URL_PATH}" \
       "basePrice": "'"${BASEPRICE}"'",
       "stock": "'"${STOCK}"'",
       "devCred": "'"${DEVCRED}"'",
-      "category": "'"${CATEGORY}"'"
+      "category": "'"${CATEGORY}"'",
+      "attributes": "'"${ATTRIBUTES}"'"
 
     }
   }'
