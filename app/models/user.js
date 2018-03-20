@@ -22,19 +22,19 @@ const userSchema = new mongoose.Schema({
     type: Boolean,
     default: false
   },
-  skills: [{
-    name: {
-      type: String,
-      required: true
-    },
-    level: {
-      type: Number,
-      required: true,
-      min: 0,
-      max: 10000,
-      default: 0
+  JavaScript: {
+    type: Number
+  },
+  skills: [
+    {
+      name: {
+        type: String
+      },
+      level: {
+        type: Number
+      }
     }
-  }],
+  ],
   powers: [{
     name: {
       type: String,

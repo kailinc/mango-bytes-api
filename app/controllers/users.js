@@ -52,7 +52,9 @@ const signup = (req, res, next) => {
     lastName: credentials.lastName,
     coderName: credentials.coderName,
     email: credentials.email,
-    password: credentials.password
+    password: credentials.password,
+    JavaScript: credentials.JavaScript,
+    skills: credentials.skills
   }
   getToken()
     .then(token => {
