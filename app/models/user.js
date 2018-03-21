@@ -23,18 +23,113 @@ const userSchema = new mongoose.Schema({
     default: false
   },
   JavaScript: {
-    type: Number
+    type: Number,
+    default: 0,
+    min: 0,
+    max: 9000
   },
-  skills: [
-    {
-      name: {
-        type: String
-      },
-      level: {
-        type: Number
-      }
-    }
-  ],
+  Python: {
+    type: Number,
+    default: 0,
+    min: 0,
+    max: 9000
+  },
+  C: {
+    type: Number,
+    default: 0,
+    min: 0,
+    max: 9000
+  },
+  CSS: {
+    type: Number,
+    default: 0,
+    min: 0,
+    max: 9000
+  },
+  GO: {
+    type: Number,
+    default: 0,
+    min: 0,
+    max: 9000
+  },
+  HTML: {
+    type: Number,
+    default: 0,
+    min: 0,
+    max: 9000
+  },
+  Java: {
+    type: Number,
+    default: 0,
+    min: 0,
+    max: 9000
+  },
+  Ruby: {
+    type: Number,
+    default: 0,
+    min: 0,
+    max: 9000
+  },
+  Angular: {
+    type: Number,
+    default: 0,
+    min: 0,
+    max: 9000
+  },
+  React: {
+    type: Number,
+    default: 0,
+    min: 0,
+    max: 9000
+  },
+  BootStrap: {
+    type: Number,
+    default: 0,
+    min: 0,
+    max: 9000
+  },
+  Django: {
+    type: Number,
+    default: 0,
+    min: 0,
+    max: 9000
+  },
+  Ember: {
+    type: Number,
+    default: 0,
+    min: 0,
+    max: 9000
+  },
+  MongoDB: {
+    type: Number,
+    default: 0,
+    min: 0,
+    max: 9000
+  },
+  SQL: {
+    type: Number,
+    default: 0,
+    min: 0,
+    max: 9000
+  },
+  Node: {
+    type: Number,
+    default: 0,
+    min: 0,
+    max: 9000
+  },
+  Rails: {
+    type: Number,
+    default: 0,
+    min: 0,
+    max: 9000
+  },
+  SASS: {
+    type: Number,
+    default: 0,
+    min: 0,
+    max: 9000
+  },
   powers: [{
     name: {
       type: String,
