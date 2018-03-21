@@ -14,7 +14,7 @@ curl "${API}/${URL_PATH}" \
   --request POST \
   --header "Content-Type: application/json" \
   --data '{
-    "item": {
+    "credentials": {
       "name": "'"${NAME}"'",
       "stock": "'"${STOCK}"'",
       "devCred": "'"${DEVCRED}"'",
@@ -31,7 +31,8 @@ curl "${API}/${URL_PATH}" \
       ],
       "tags": ["sass", "html", "css", "bootstrap", "skills"],
       "des": "'"${DES}"'",
-      "img": "'"${IMG}"'"
+      "img": "'"${IMG}"'",
+      "apple": "taste good"
     }
   }'
 

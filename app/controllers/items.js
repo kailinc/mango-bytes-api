@@ -23,7 +23,17 @@ const show = (req, res) => {
 
 const create = (req, res, next) => {
   // req.body.cart.nested.stuff = 'ok'
-  const item = Object.assign(req.body.item)
+  const credentials = req.body.credentials
+  const item = {
+    name: credentials.name,
+    des: credentials.des,
+    img: credentials.img,
+    tags: credentials.tags,
+    basePrice: credentials.basePrice,
+    stock: credentials.stock,
+    attributes: credentials.attributes,
+    devCred: credentials.devCred
+  }
   Item.create(item)
     .then(item => {
       res.status(201)
