@@ -31,10 +31,16 @@ const itemSchema = new mongoose.Schema({
     type: Number,
     required: true
   },
-  attributes: {
-    type: String,
-    required: true
-  },
+  attributes: [
+    {
+      name: String,
+      exp: {
+        type: Number,
+        min: 0,
+        max: 10
+      }
+    }
+  ],
   devCred: {
     type: Number,
     required: true
