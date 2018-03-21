@@ -40,19 +40,19 @@ const userSchema = new mongoose.Schema({
     min: 0,
     max: 9000
   },
-  CSS: {
+  Css: {
     type: Number,
     default: 0,
     min: 0,
     max: 9000
   },
-  GO: {
+  Go: {
     type: Number,
     default: 0,
     min: 0,
     max: 9000
   },
-  HTML: {
+  Html: {
     type: Number,
     default: 0,
     min: 0,
@@ -106,7 +106,7 @@ const userSchema = new mongoose.Schema({
     min: 0,
     max: 9000
   },
-  SQL: {
+  Sql: {
     type: Number,
     default: 0,
     min: 0,
@@ -119,12 +119,6 @@ const userSchema = new mongoose.Schema({
     max: 9000
   },
   Rails: {
-    type: Number,
-    default: 0,
-    min: 0,
-    max: 9000
-  },
-  SASS: {
     type: Number,
     default: 0,
     min: 0,

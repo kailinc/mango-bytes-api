@@ -110,8 +110,24 @@ const updateuser = (req, res, next) => {
     user.coderName = credentials.coderName
     user.devCred = credentials.devCred
     user.fourScreens = credentials.fourScreens
-    user.skills = credentials.skills
     user.powers = credentials.powers
+    user.JavaScript = credentials.JavaScript
+    user.Python = credentials.Python
+    user.C = credentials.C
+    user.Css = credentials.Css
+    user.Go = credentials.Go
+    user.Html = credentials.Html
+    user.Java = credentials.Java
+    user.Ruby = credentials.Ruby
+    user.Angular = credentials.Angular
+    user.React = credentials.React
+    user.BootStrap = credentials.BootStrap
+    user.Django = credentials.Django
+    user.Ember = credentials.Ember
+    user.MongoDB = credentials.MongoDB
+    user.Sql = credentials.Sql
+    user.Node = credentials.Node
+    user.Rails = credentials.Rails
     return user.save()
   }).then((/* user */) =>
     res.sendStatus(204)

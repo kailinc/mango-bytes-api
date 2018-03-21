@@ -2,8 +2,8 @@
 FIRSTNAME='kailin'
 LASTNAME='chen'
 CODERNAME='KaiBoard'
-EMAIL='z17@z17'
-PASSWORD='z17'
+EMAIL='z19@z19'
+PASSWORD='z19'
 API="http://localhost:4741"
 URL_PATH="/sign-up"
 
