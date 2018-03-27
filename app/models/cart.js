@@ -94,6 +94,37 @@ cartSchema.virtual('totalPrice').get(function length () {
   return (this.productTotal + this.tax) - this.discount
 })
 
+cartSchema.virtual('skills').get(function length () {
+  const skills = []
+  for (let i = 0; i < this.products.length; i++) {
+    for (let j = 0; j < this.products[i].attributes.length; j++) {
+      const skillName = this.products[i].attributes[j].name
+      const skillExp = this.products[i].attributes[j].exp
+      const quantity = this.products[i].quantity
+      const pos = getAttPos(skills, skillName)
+      if (pos > -1) {
+        skills[pos].exp += (skillExp * quantity)
+      } else {
+        const newSkill = {
+          name: skillName,
+          exp: skillExp * quantity
+        }
+        skills.push(newSkill)
+      }
+    }
+  }
+  return skills
+})
+
+const getAttPos = function (skills, skillName) {
+  for (let i = 0; i < skills.length; i++) {
+    if (skills[i].name === skillName) {
+      return i
+    }
+  }
+  return -1
+}
+
 const Cart = mongoose.model('Cart', cartSchema)
 
 module.exports = Cart

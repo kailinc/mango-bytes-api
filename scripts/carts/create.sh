@@ -24,7 +24,7 @@ curl "${API}${URL_PATH}" \
           "basePrice": "'"${BASEPRICE}"'",
           "attributes": [
             {
-              "name": "Sass",
+              "name": "Python",
               "exp": "2"
             },
             {
