@@ -19,7 +19,6 @@ curl "${API}${URL_PATH}" \
       "products": [
         {
           "item_id": "59a197c79f399e9a7f9725b0",
-          "quantity": "3000",
           "name": "'"${NAME}"'",
           "devCred": "'"${DEVCRED}"'",
           "basePrice": "'"${BASEPRICE}"'",
@@ -35,6 +34,24 @@ curl "${API}${URL_PATH}" \
           ],
           "img": "'"${IMG}"'",
           "quantity": "'"${QUANTITY}"'"
+        },
+        {
+          "item_id": "59a197c79f399e9a7f9725b1",
+          "name": "Python",
+          "devCred": "'"${DEVCRED}"'",
+          "basePrice": "5",
+          "attributes": [
+            {
+              "name": "Python",
+              "exp": "2"
+            },
+            {
+              "name": "Django",
+              "exp": "2"
+            }
+          ],
+          "img": "'"${IMG}"'",
+          "quantity": "3"
         }
       ]
     }
