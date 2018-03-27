@@ -41,7 +41,7 @@ curl "${API}${URL_PATH}" \
           "devCred": "'"${DEVCRED}"'",
           "basePrice": "5",
           "attributes": [
-            {
+            {g
               "name": "Python",
               "exp": "2"
             },
