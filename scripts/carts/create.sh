@@ -1,6 +1,11 @@
 #!/bin/bash
+NAME='JavaScript'
+DEVCRED=100
+BASEPRICE=5
+IMG='https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/sass.png'
+QUANTITY=2
 
-TOKEN='BseBu76jnzgBP1PMu1RgI6L4T2uRyFLKm6wiYufNxKg=--5mgITLr/mDtD1lfhXDiknVNKcqCY9MmT/HHSn+x5VTQ='
+TOKEN='xasEZ4S9OC984ckxmRqhrmIoFFGXvsd7+nIudJnBUX8=--MGEQT1+t/3H7ABmIlZyFnLpMWaDMKNTxhgVFqP/7H2Y='
 API="http://localhost:4741"
 URL_PATH="/carts"
 
@@ -11,7 +16,27 @@ curl "${API}${URL_PATH}" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
     "cart": {
-      "products": [{"item_id": "59a197c79f399e9a7f9725b0", "quantity": "3000"}]
+      "products": [
+        {
+          "item_id": "59a197c79f399e9a7f9725b0",
+          "quantity": "3000",
+          "name": "'"${NAME}"'",
+          "devCred": "'"${DEVCRED}"'",
+          "basePrice": "'"${BASEPRICE}"'",
+          "attributes": [
+            {
+              "name": "Sass",
+              "exp": "2"
+            },
+            {
+              "name": "Html",
+              "exp": "2"
+            }
+          ],
+          "img": "'"${IMG}"'",
+          "quantity": "'"${QUANTITY}"'"
+        }
+      ]
     }
   }'
 
