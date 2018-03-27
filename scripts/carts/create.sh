@@ -53,7 +53,8 @@ curl "${API}${URL_PATH}" \
           "img": "'"${IMG}"'",
           "quantity": "3"
         }
-      ]
+      ],
+      "discount": "10"
     }
   }'
 

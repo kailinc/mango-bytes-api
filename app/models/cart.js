@@ -46,6 +46,11 @@ const cartSchema = new mongoose.Schema({
     type: Boolean,
     default: false
   },
+  discount: {
+    type: Number,
+    default: 0,
+    min: 0
+  },
   _owner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
@@ -63,7 +68,7 @@ const cartSchema = new mongoose.Schema({
   }
 })
 
-cartSchema.virtual('totalPrice').get(function length () {
+cartSchema.virtual('productTotal').get(function length () {
   const productList = this.products
   let total = 0
   for (let i = 0; i < productList.length; i++) {
@@ -79,6 +84,14 @@ cartSchema.virtual('totalDevCred').get(function length () {
     total += (productList[i].devCred * productList[i].quantity)
   }
   return total
+})
+
+cartSchema.virtual('tax').get(function length () {
+  return this.productTotal * 0.06
+})
+
+cartSchema.virtual('totalPrice').get(function length () {
+  return (this.productTotal + this.tax) - this.discount
 })
 
 const Cart = mongoose.model('Cart', cartSchema)
