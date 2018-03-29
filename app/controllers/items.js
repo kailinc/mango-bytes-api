@@ -30,7 +30,6 @@ const create = (req, res, next) => {
     img: credentials.img,
     tags: credentials.tags,
     basePrice: credentials.basePrice,
-    stock: credentials.stock,
     attributes: credentials.attributes,
     devCred: credentials.devCred
   }

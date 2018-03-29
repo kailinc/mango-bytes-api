@@ -1,10 +1,9 @@
 #!/bin/bash
-NAME='111111'
-STOCK=10000
+NAME='Ruby'
 DEVCRED=100
 BASEPRICE=5
-DES='a scripting language that is interpreted or compiled into Cascading Style Sheets'
-IMG='https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/sass.png'
+DES='Ruby is a dynamic, reflective, object-oriented, general-purpose programming language. It was designed and developed in the mid-1990s by Yukihiro Matsumoto in Japan. According to the creator, Ruby was influenced by Perl, Smalltalk, Eiffel, Ada, and Lisp.'
+IMG='https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/ruby.png'
 
 API="http://localhost:4741"
 URL_PATH="item"
@@ -16,23 +15,17 @@ curl "${API}/${URL_PATH}" \
   --data '{
     "credentials": {
       "name": "'"${NAME}"'",
-      "stock": "'"${STOCK}"'",
       "devCred": "'"${DEVCRED}"'",
       "basePrice": "'"${BASEPRICE}"'",
       "attributes": [
         {
-          "name": "Sass",
-          "exp": "2"
-        },
-        {
-          "name": "Html",
-          "exp": "2"
+          "name": "Ruby",
+          "exp": "3"
         }
       ],
-      "tags": ["sass", "html", "css", "bootstrap", "skills"],
+      "tags": [ "ruby", "skills"],
       "des": "'"${DES}"'",
-      "img": "'"${IMG}"'",
-      "apple": "taste good"
+      "img": "'"${IMG}"'"
     }
   }'
 

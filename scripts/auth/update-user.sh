@@ -1,6 +1,6 @@
 #!/bin/bash
-TOKEN='JDzqmZd/iv/hQGgV+0/aaW0G76kLAcS/+brVnTqjpu8=--UASWMoB56PP+XqD1U97sIQ1Kl3XrTE2NFBecAwkav+o='
-ID='5ab26b262d77233e9cfa9fed'
+TOKEN='pki/5BNYnaxoqtvGcXbmkf37bVjNuR7WcA2KvGHWpvM=--TYy0npy6OSz+EW3HwegucSfOAWtaaE+/eZkG3caUd+U='
+ID='5abba9b556c5477953f091f9'
 
 API="http://localhost:4741"
 URL_PATH="/update-user"

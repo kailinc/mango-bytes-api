@@ -16,7 +16,7 @@ curl "${API}${URL_PATH}" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
     "cart": {
-      "products": [
+      "items": [
         {
           "item_id": "59a197c79f399e9a7f9725b0",
           "name": "'"${NAME}"'",

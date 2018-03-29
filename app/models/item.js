@@ -20,10 +20,6 @@ const itemSchema = new mongoose.Schema({
     type: Number,
     required: true
   },
-  stock: {
-    type: Number,
-    required: true
-  },
   attributes: [
     {
       name: String,
