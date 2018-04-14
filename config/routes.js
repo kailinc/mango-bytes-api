@@ -22,7 +22,12 @@ module.exports = require('lib/wiring/routes')
 .get('/items', 'items#index')
 .get('/items/:id', 'items#show')
 .post('/item', 'items#create')
+.delete('/delete-item/:id', 'items#destroy')
 
 // standards RESTful for carts
 .resources('carts')
-// .get('/current-cart/', 'cart#currentcart')
+.post('/create-cart', 'carts#create')
+.patch('/update-cart/:id', 'carts#update')
+.delete('/delete-cart/:id', 'carts#destroy')
+
+.resources('charges', {only: ['create']})

@@ -43,10 +43,17 @@ const create = (req, res, next) => {
     .catch(next)
 }
 
+const destroy = (req, res, next) => {
+  req.cart.remove()
+    .then(() => res.sendStatus(204))
+    .catch(next)
+}
+
 module.exports = controller({
   index,
   show,
-  create
+  create,
+  destroy
 }, { before: [
   { method: setModel(Item), only: ['show'] }
 ] })
