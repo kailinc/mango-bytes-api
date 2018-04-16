@@ -13,7 +13,7 @@ const create = (req, res, next) => {
     // in your stripe dashboard, this is the displayed email as customer
     email: req.body.charge.email,
     // their card (it is hashed)
-    source: req.body.charge.id
+    source: req.body.charge.stripeToken.token.id
   })
   .then(customer => {
     // the charge itself
