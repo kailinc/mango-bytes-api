@@ -4,13 +4,10 @@ const mongoose = require('mongoose')
 
 // declaration of schema
 const chargeSchema = new mongoose.Schema({
-  // what to expect from the returned token from the stripe api
   stripeToken: {
-    // all tokens are strings
     type: String,
     required: true
   },
-  // the amount will be a number returned in the cents value
   amount: {
     type: Number,
     required: true
@@ -19,18 +16,16 @@ const chargeSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  // description: {
-  //   type: String,
-  //   required: false
-  // },
-  // owner reference
+  cartId: {
+    type: String,
+    required: true
+  },
   _owner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
     required: true
   }
 }, {
-  // add a timestamp for the transaction
   timestamps: true,
   toJSON: {
     virtuals: true,

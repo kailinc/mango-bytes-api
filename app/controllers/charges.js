@@ -15,7 +15,8 @@ const create = (req, res, next) => {
     shipping: req.body.charge.shipping,
     amount: req.body.charge.amount,
     currency: req.body.charge.currency,
-    userId: req.body.userId
+    userId: req.body.userId,
+    cartId: req.body.cartId
   }
   // this data is given to us from the token from stripe
   stripe.customers.create({
@@ -42,10 +43,10 @@ const create = (req, res, next) => {
   })
   .then(charge => {
     Charge.create({
-      // the token id (the credit card)
       'stripeToken': charge.id,
-      // amount is always in cents
       'amount': charge.amount,
+      'currency': data.currency,
+      'cart': data.cartId,
       '_owner': data.userId
     })
   })
