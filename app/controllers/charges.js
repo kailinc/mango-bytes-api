@@ -8,12 +8,14 @@ const stripe = require('stripe')('sk_test_q60nMuMw7awlmcjHAOQdTSu0')
 
 const create = (req, res, next) => {
   const data = {
-    email: req.body.charge.email,
+    email: "kailin@gmail.com",
+    // email: req.body.charge.email,
     source: req.body.charge.stripeToken,
     description: req.body.charge.description,
     shipping: req.body.charge.shipping,
     amount: req.body.charge.amount,
-    currency: req.body.charge.currency
+    currency: req.body.charge.currency,
+    userId: req.body.userId
   }
   // this data is given to us from the token from stripe
   stripe.customers.create({
@@ -33,22 +35,27 @@ const create = (req, res, next) => {
       description: data.description,
       currency: data.currency,
       // hashed by stripe and placed in the token for us
-      customer: customer.id
+      customer: customer.id,
+      receipt_email: data.email,
+      shipping: data.shipping
     })
+  })
   .then(charge => {
-    res.send(charge)
-    // more of the charge itself
     Charge.create({
       // the token id (the credit card)
       'stripeToken': charge.id,
       // amount is always in cents
       'amount': charge.amount,
-      '_owner': req.user._id
+      '_owner': data.userId
     })
   })
-    // error return
-      .catch(error => console.log(error))
+  .then(charge => {
+    res.status(201)
+      .json({
+        charge: charge.toJSON()
+      })
   })
+  .catch(next)
 }
 
 module.exports = controller({
