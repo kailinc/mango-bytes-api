@@ -23,6 +23,15 @@ const show = (req, res) => {
   })
 }
 
+const indexOwnCart = (req, res, next) => {
+  Cart.find({ _owner: req.params.id })
+    .then(carts => res.json({
+      carts: carts.map((e) =>
+        e.toJSON({ virtuals: true, user: req.user }))
+    }))
+    .catch(next)
+}
+
 const create = (req, res, next) => {
   // req.body.cart.nested.stuff = 'ok'
   const cart = Object.assign(req.body.cart, {
@@ -79,6 +88,7 @@ const destroy = (req, res, next) => {
 module.exports = controller({
   index,
   show,
+  indexOwnCart,
   create,
   update,
   destroy
