@@ -5,7 +5,7 @@ BASEPRICE=5
 IMG='https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/sass.png'
 QUANTITY=2
 
-TOKEN='xasEZ4S9OC984ckxmRqhrmIoFFGXvsd7+nIudJnBUX8=--MGEQT1+t/3H7ABmIlZyFnLpMWaDMKNTxhgVFqP/7H2Y='
+TOKEN='8SlnzYGMSXG+jxrftSNdqJs2rDNPKMqIbbm9p5JQ/t0=--y/HG3DTUY+KeHOoQTD/ZElD0mVhwoabv/7SBSu6wjl4='
 API="http://localhost:4741"
 URL_PATH="/carts"
 
@@ -41,7 +41,7 @@ curl "${API}${URL_PATH}" \
           "devCred": "'"${DEVCRED}"'",
           "basePrice": "5",
           "attributes": [
-            {g
+            {
               "name": "Python",
               "exp": "2"
             },
@@ -54,7 +54,14 @@ curl "${API}${URL_PATH}" \
           "quantity": "3"
         }
       ],
-      "discount": "10"
+      "discount": "10",
+      "isPaid": "true",
+      "discount": "10",
+      "charge": "123421",
+      "attributes": {
+        "JavaScript": "10",
+        "Python": "20"
+      }
     }
   }'
 

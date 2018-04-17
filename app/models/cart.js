@@ -51,6 +51,8 @@ const cartSchema = new mongoose.Schema({
     default: 0,
     min: 0
   },
+  attributes: {},
+  charge: String,
   _owner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
@@ -69,19 +71,19 @@ const cartSchema = new mongoose.Schema({
 })
 
 cartSchema.virtual('productTotal').get(function length () {
-  const productList = this.products
+  const items = this.items
   let total = 0
-  for (let i = 0; i < productList.length; i++) {
-    total += (productList[i].basePrice * productList[i].quantity)
+  for (let i = 0; i < items.length; i++) {
+    total += (items[i].basePrice * items[i].quantity)
   }
   return total
 })
 
 cartSchema.virtual('totalDevCred').get(function length () {
-  const productList = this.products
+  const items = this.items
   let total = 0
-  for (let i = 0; i < productList.length; i++) {
-    total += (productList[i].devCred * productList[i].quantity)
+  for (let i = 0; i < items.length; i++) {
+    total += (items[i].devCred * items[i].quantity)
   }
   return total
 })
@@ -94,36 +96,36 @@ cartSchema.virtual('totalPrice').get(function length () {
   return (this.productTotal + this.tax) - this.discount
 })
 
-cartSchema.virtual('skills').get(function length () {
-  const skills = []
-  for (let i = 0; i < this.products.length; i++) {
-    for (let j = 0; j < this.products[i].attributes.length; j++) {
-      const skillName = this.products[i].attributes[j].name
-      const skillExp = this.products[i].attributes[j].exp
-      const quantity = this.products[i].quantity
-      const pos = getAttPos(skills, skillName)
-      if (pos > -1) {
-        skills[pos].exp += (skillExp * quantity)
-      } else {
-        const newSkill = {
-          name: skillName,
-          exp: skillExp * quantity
-        }
-        skills.push(newSkill)
-      }
-    }
-  }
-  return skills
-})
+// cartSchema.virtual('skills').get(function length () {
+//   const skills = []
+//   for (let i = 0; i < this.products.length; i++) {
+//     for (let j = 0; j < this.products[i].attributes.length; j++) {
+//       const skillName = this.products[i].attributes[j].name
+//       const skillExp = this.products[i].attributes[j].exp
+//       const quantity = this.products[i].quantity
+//       const pos = getAttPos(skills, skillName)
+//       if (pos > -1) {
+//         skills[pos].exp += (skillExp * quantity)
+//       } else {
+//         const newSkill = {
+//           name: skillName,
+//           exp: skillExp * quantity
+//         }
+//         skills.push(newSkill)
+//       }
+//     }
+//   }
+//   return skills
+// })
 
-const getAttPos = function (skills, skillName) {
-  for (let i = 0; i < skills.length; i++) {
-    if (skills[i].name === skillName) {
-      return i
-    }
-  }
-  return -1
-}
+// const getAttPos = function (skills, skillName) {
+//   for (let i = 0; i < skills.length; i++) {
+//     if (skills[i].name === skillName) {
+//       return i
+//     }
+//   }
+//   return -1
+// }
 
 const Cart = mongoose.model('Cart', cartSchema)
 
