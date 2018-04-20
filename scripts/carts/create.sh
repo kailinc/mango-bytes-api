@@ -5,7 +5,7 @@ BASEPRICE=5
 IMG='https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/sass.png'
 QUANTITY=2
 
-TOKEN='8SlnzYGMSXG+jxrftSNdqJs2rDNPKMqIbbm9p5JQ/t0=--y/HG3DTUY+KeHOoQTD/ZElD0mVhwoabv/7SBSu6wjl4='
+TOKEN='00Qa4+FNZ6qIQdVlh1G2zh4741/zwEEsxghmlPBlmOQ=--J8DOC4lwr7g8yMFDqK379O+hC5a76j2pdSlVXPUzyPM='
 API="http://localhost:4741"
 URL_PATH="/carts"
 
