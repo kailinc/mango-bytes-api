@@ -31,4 +31,5 @@ module.exports = require('lib/wiring/routes')
 .patch('/update-cart/:id', 'carts#update')
 .delete('/delete-cart/:id', 'carts#destroy')
 
-.resources('charges', {only: ['create']})
+.get('/charges', 'charges#index')
+.post('/charges', 'charges#create')
