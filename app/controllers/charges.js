@@ -3,8 +3,19 @@
 const controller = require('lib/wiring/controller')
 const models = require('app/models')
 const Charge = models.charge
+
+const setUser = require('./concerns/set-current-user')
 const authenticate = require('./concerns/authenticate')
 const stripe = require('stripe')('sk_test_q60nMuMw7awlmcjHAOQdTSu0')
+
+const index = (req, res, next) => {
+  Charge.find()
+    .then(charges => res.json({
+      charges: charges.map((e) =>
+        e.toJSON({ virtuals: true, user: req.user }))
+    }))
+    .catch(next)
+}
 
 const create = (req, res, next) => {
   const data = {
@@ -15,8 +26,8 @@ const create = (req, res, next) => {
     shipping: req.body.charge.shipping,
     amount: req.body.charge.amount,
     currency: req.body.charge.currency,
-    userId: req.body.userId,
-    cartId: req.body.cartId
+    userId: req.body.charge.userId,
+    cartId: req.body.charge.cartId
   }
   // this data is given to us from the token from stripe
   stripe.customers.create({
@@ -41,26 +52,29 @@ const create = (req, res, next) => {
       shipping: data.shipping
     })
   })
-  .then(charge => {
+  .then((charge) => {
+    res.send(charge)
     Charge.create({
-      'stripeToken': charge.id,
-      'amount': charge.amount,
+      'stripeToken': data.source,
+      'amount': data.amount,
       'currency': data.currency,
-      'cart': data.cartId,
+      'cartId': data.cartId,
       '_owner': data.userId
     })
   })
-  .then(charge => {
-    res.status(201)
-      .json({
-        charge: charge.toJSON()
-      })
-  })
-  .catch(next)
+  // .then(charge => {
+  //   res.status(201)
+  //     .json({
+  //       charge: charge.toJSON()
+  //     })
+  // })
+  .catch((err) => console.log(err))
 }
 
 module.exports = controller({
+  index,
   create
 }, { before: [
-  { method: authenticate }
+  { method: setUser, only: ['index'] },
+  { method: authenticate, except: ['index'] }
 ] })

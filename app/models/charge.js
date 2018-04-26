@@ -6,15 +6,15 @@ const mongoose = require('mongoose')
 const chargeSchema = new mongoose.Schema({
   stripeToken: {
     type: String,
-    required: true
+    required: false
   },
   amount: {
     type: Number,
-    required: true
+    required: false
   },
   currency: {
     type: String,
-    required: true
+    required: false
   },
   cartId: {
     type: String,
@@ -35,10 +35,6 @@ const chargeSchema = new mongoose.Schema({
       return ret
     }
   }
-})
-
-chargeSchema.virtual('length').get(function length () {
-  return this.text.length
 })
 
 const Charge = mongoose.model('Charge', chargeSchema)
