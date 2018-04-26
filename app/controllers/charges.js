@@ -52,8 +52,7 @@ const create = (req, res, next) => {
       shipping: data.shipping
     })
   })
-  .then((charge) => {
-    res.send(charge)
+  .then(() => {
     Charge.create({
       'stripeToken': data.source,
       'amount': data.amount,
@@ -61,13 +60,13 @@ const create = (req, res, next) => {
       'cartId': data.cartId,
       '_owner': data.userId
     })
+    .then(charge => {
+      res.status(201)
+        .json({
+          charge: charge.toJSON()
+        })
+    })
   })
-  // .then(charge => {
-  //   res.status(201)
-  //     .json({
-  //       charge: charge.toJSON()
-  //     })
-  // })
   .catch((err) => console.log(err))
 }
 
