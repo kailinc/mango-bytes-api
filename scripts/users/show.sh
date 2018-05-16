@@ -1,6 +1,6 @@
 #!/bin/bash
-TOKEN='JDzqmZd/iv/hQGgV+0/aaW0G76kLAcS/+brVnTqjpu8=--UASWMoB56PP+XqD1U97sIQ1Kl3XrTE2NFBecAwkav+o='
-ID='5ab26b262d77233e9cfa9fed'
+TOKEN='sM06dDMP0W4NSM6MMemiodiYE5+Ut0k9cyZcUu/Hj1k=--glqBsw5J8z2Jo9FEo7dgdEFmS9GGsqLGbaj4bBBUfSo='
+ID='5ad4b31852bb4327aa952e6c'
 
 API="http://localhost:4741"
 URL_PATH="/users"

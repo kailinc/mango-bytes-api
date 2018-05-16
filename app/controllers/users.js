@@ -99,39 +99,46 @@ const signout = (req, res, next) => {
   ).catch(next)
 }
 
-const updateuser = (req, res, next) => {
-  const credentials = req.body.credentials
-  User.findOne({
-    _id: req.params.id,
-    token: req.user.token
-  }).then(user => {
-    user.firstName = credentials.firstName
-    user.lastName = credentials.lastName
-    user.coderName = credentials.coderName
-    user.devCred = credentials.devCred
-    user.fourScreens = credentials.fourScreens
-    user.powers = credentials.powers
-    user.JavaScript = credentials.JavaScript
-    user.Python = credentials.Python
-    user.C = credentials.C
-    user.Css = credentials.Css
-    user.Go = credentials.Go
-    user.Html = credentials.Html
-    user.Java = credentials.Java
-    user.Ruby = credentials.Ruby
-    user.Angular = credentials.Angular
-    user.React = credentials.React
-    user.BootStrap = credentials.BootStrap
-    user.Django = credentials.Django
-    user.Ember = credentials.Ember
-    user.MongoDB = credentials.MongoDB
-    user.Sql = credentials.Sql
-    user.Node = credentials.Node
-    user.Rails = credentials.Rails
-    return user.save()
-  }).then((/* user */) =>
-    res.sendStatus(204)
-  ).catch(makeErrorHandler(res, next))
+// const updateuser = (req, res, next) => {
+//   const credentials = req.body.credentials
+//   User.findOne({
+//     _id: req.params.id,
+//     token: req.user.token
+//   }).then(user => {
+//     user.firstName = credentials.firstName
+//     user.lastName = credentials.lastName
+//     user.coderName = credentials.coderName
+//     user.devCred = credentials.devCred
+//     user.fourScreens = credentials.fourScreens
+//     user.powers = credentials.powers
+//     user.JavaScript = credentials.JavaScript
+//     user.Python = credentials.Python
+//     user.C = credentials.C
+//     user.Css = credentials.Css
+//     user.Go = credentials.Go
+//     user.Html = credentials.Html
+//     user.Java = credentials.Java
+//     user.Ruby = credentials.Ruby
+//     user.Angular = credentials.Angular
+//     user.React = credentials.React
+//     user.BootStrap = credentials.BootStrap
+//     user.Django = credentials.Django
+//     user.Ember = credentials.Ember
+//     user.MongoDB = credentials.MongoDB
+//     user.Sql = credentials.Sql
+//     user.Node = credentials.Node
+//     user.Rails = credentials.Rails
+//     return user.save()
+//   }).then((/* user */) =>
+//     res.sendStatus(204)
+//   ).catch(makeErrorHandler(res, next))
+// }
+
+const update = (req, res, next) => {
+  delete req.body._owner  // disallow owner reassignment.
+  req.user.update(req.body.user)
+    .then(() => res.sendStatus(204))
+    .catch(next)
 }
 
 const changepw = (req, res, next) => {
@@ -155,8 +162,8 @@ module.exports = controller({
   signup,
   signin,
   signout,
-  changepw,
-  updateuser
+  update,
+  changepw
 }, { before: [
   { method: authenticate, except: ['signup', 'signin'] }
 ] })
