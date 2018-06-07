@@ -28,10 +28,10 @@ const create = (req, res, next) => {
     name: credentials.name,
     des: credentials.des,
     img: credentials.img,
-    tags: credentials.tags,
     basePrice: credentials.basePrice,
     attributes: credentials.attributes,
-    devCred: credentials.devCred
+    devCred: credentials.devCred,
+    category: credentials.category
   }
   Item.create(item)
     .then(item => {
