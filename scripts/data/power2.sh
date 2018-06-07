@@ -1,5 +1,5 @@
 #!/bin/bash
-NAME='Pest Controlla'
+NAME='PestControlla'
 DEVCRED=10000
 BASEPRICE=100000
 DES='Whenever you see a bug in your code, you know exactly why its there and what caused it. Your codes does not surprise you with silly moves. You are the Pest Controlla.'

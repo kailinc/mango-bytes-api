@@ -5,7 +5,7 @@ BASEPRICE=50
 DES='Sticker for Skills'
 IMG='https://s3.us-east-2.amazonaws.com/mango-bytes/stickers/angular.png'
 CAT='stickers'
-API="https://damp-hamlet-57878.herokuapp.com/"
+API="http://localhost:4741"
 URL_PATH="item"
 
 curl "${API}/${URL_PATH}" \

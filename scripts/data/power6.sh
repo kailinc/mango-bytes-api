@@ -1,5 +1,5 @@
 #!/bin/bash
-NAME='Walking Google'
+NAME='WalkingGoogle'
 DEVCRED=10000
 BASEPRICE=100000
 DES='Everything that is on the Internet is in your head. You do not need to search on Google for answers. You have the answers.'

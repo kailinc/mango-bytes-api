@@ -1,5 +1,5 @@
 #!/bin/bash
-TOKEN=gEq6V3dd1u6KLuVl2EebFfBom1E18k04LREiM8ulJdQ=--WGIMjY2nTnPeGF2zBZAtq0YO4bz0eMVRE02Y8z6Kr48=
+TOKEN='QSsdfqKFax3ieH/cBI7pAOdeuuJypeOqOqfTBPQxcc8=--6JSqkHEwhrjHc2VsKqon62sNFV5lJ6FX3Oja546/uG4='
 API="http://localhost:4741"
 URL_PATH="/users"
 

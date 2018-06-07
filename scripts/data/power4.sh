@@ -1,5 +1,5 @@
 #!/bin/bash
-NAME='Free Life Time Supply of Coffee'
+NAME='CoffeeAngel'
 DEVCRED=10000
 BASEPRICE=100000
 DES='The water you touch becomes any type of coffee you want. This way you can always be focused and full of energy. There is no such thing as caffine overdose or caffine crash.'

@@ -1,5 +1,5 @@
 #!/bin/bash
-NAME='2 Doc'
+NAME='DocKing'
 DEVCRED=10000
 BASEPRICE=100000
 DES='You can understand any documentation easily. No matter how horrible the documentation is, you can easily find what you need.'

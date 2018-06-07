@@ -124,16 +124,30 @@ const userSchema = new mongoose.Schema({
     min: 0,
     max: 9000
   },
-  powers: [{
-    name: {
-      type: String,
-      required: true
-    },
-    img: {
-      type: String,
-      required: true
-    }
-  }],
+  FireFingers: {
+    type: Boolean,
+    default: false
+  },
+  PestControlla: {
+    type: Boolean,
+    default: false
+  },
+  DocKing: {
+    type: Boolean,
+    default: false
+  },
+  CoffeeAngel: {
+    type: Boolean,
+    default: false
+  },
+  TypNO: {
+    type: Boolean,
+    default: false
+  },
+  WalkingGoogle: {
+    type: Boolean,
+    default: false
+  },
   email: {
     type: String,
     unique: true,

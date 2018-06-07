@@ -1,5 +1,5 @@
 #!/bin/bash
-NAME='Typ-NO'
+NAME='TypNO'
 DEVCRED=10000
 BASEPRICE=100000
 DES='Every word or character you type is correct. Your accuracy is 100%. There will be no comma, semi-colon, brackets, or dots playing hide and seek with you.'
