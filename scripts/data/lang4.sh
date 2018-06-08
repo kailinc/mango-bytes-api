@@ -5,7 +5,7 @@ BASEPRICE=300
 DES='CSS stands for Cascading Style Sheets. CSS describes how HTML elements are to be displayed on screen, paper, or in other media. CSS saves a lot of work. It can control the layout of multiple web pages all at once. External stylesheets are stored in CSS files.'
 IMG='https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/css.png'
 CAT='points'
-API="https://damp-hamlet-57878.herokuapp.com/"
+API="https://damp-hamlet-57878.herokuapp.com"
 URL_PATH="item"
 
 curl "${API}/${URL_PATH}" \

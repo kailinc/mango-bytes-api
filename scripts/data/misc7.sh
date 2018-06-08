@@ -5,7 +5,7 @@ BASEPRICE=1499
 DES='Whiteboards made a HUGE comeback. In kindergarden, you drew cute pictures to impress your teachers. Now you write complicated, scalable algorithms that uses cloud computing, blockchain technology, virtual reality, artificial intelligence on these white plastic boards.'
 IMG='https://s3.us-east-2.amazonaws.com/mango-bytes/miscellaneous/whiteboard.png'
 CAT='misc'
-API="https://damp-hamlet-57878.herokuapp.com/"
+API="https://damp-hamlet-57878.herokuapp.com"
 URL_PATH="item"
 
 curl "${API}/${URL_PATH}" \

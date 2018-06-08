@@ -5,7 +5,7 @@ BASEPRICE=1499
 DES='Clothing to Represent'
 IMG='https://s3.us-east-2.amazonaws.com/mango-bytes/shirts/Screen+Shot+2017-08-18+at+8.25.52+PM.png'
 CAT='swag'
-API="https://damp-hamlet-57878.herokuapp.com/"
+API="https://damp-hamlet-57878.herokuapp.com"
 URL_PATH="item"
 
 curl "${API}/${URL_PATH}" \

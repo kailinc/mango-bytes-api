@@ -5,7 +5,7 @@ BASEPRICE=7570000
 DES='Elon Musk is AWESOME!'
 IMG='https://s3.us-east-2.amazonaws.com/mango-bytes/miscellaneous/tesla.png'
 CAT='misc'
-API="https://damp-hamlet-57878.herokuapp.com/"
+API="https://damp-hamlet-57878.herokuapp.com"
 URL_PATH="item"
 
 curl "${API}/${URL_PATH}" \

@@ -5,7 +5,7 @@ BASEPRICE=100000
 DES='Everything that is on the Internet is in your head. You do not need to search on Google for answers. You have the answers.'
 IMG='https://s3.us-east-2.amazonaws.com/mango-bytes/super-ability/walking-google.png'
 CAT='superpowers'
-API="http://localhost:4741"
+API="https://damp-hamlet-57878.herokuapp.com"
 URL_PATH="item"
 
 curl "${API}/${URL_PATH}" \

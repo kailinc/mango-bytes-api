@@ -5,7 +5,7 @@ BASEPRICE=100000
 DES='You type at the speed on light. Everything that comes to your mind instantly appears on the screen.'
 IMG='https://s3.us-east-2.amazonaws.com/mango-bytes/super-ability/9000-wpm.png'
 CAT='superpowers'
-API="http://localhost:4741"
+API="https://damp-hamlet-57878.herokuapp.com"
 URL_PATH="item"
 
 curl "${API}/${URL_PATH}" \

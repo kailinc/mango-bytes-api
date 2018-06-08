@@ -5,7 +5,7 @@ BASEPRICE=300
 DES='React allows developers to create large web-applications that use data and can change over time without reloading the page. It aims primarily to provide speed, simplicity, and scalability. React processes only user interfaces in applications.'
 IMG='https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/react.png'
 CAT='points'
-API="https://damp-hamlet-57878.herokuapp.com/"
+API="https://damp-hamlet-57878.herokuapp.com"
 URL_PATH="item"
 
 curl "${API}/${URL_PATH}" \

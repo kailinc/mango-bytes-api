@@ -5,7 +5,7 @@ BASEPRICE=500
 DES='JavaScript is a high-level, interpreted programming language. It is a language which is also characterized as dynamic, weakly typed, prototype-based and multi-paradigm.'
 IMG='https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/js.png'
 CAT='points'
-API="https://damp-hamlet-57878.herokuapp.com/"
+API="https://damp-hamlet-57878.herokuapp.com"
 URL_PATH="item"
 
 curl "${API}/${URL_PATH}" \
