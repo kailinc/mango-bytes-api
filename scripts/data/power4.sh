@@ -5,7 +5,7 @@ BASEPRICE=100000
 DES='The water you touch becomes any type of coffee you want. This way you can always be focused and full of energy. There is no such thing as caffine overdose or caffine crash.'
 IMG='https://s3.us-east-2.amazonaws.com/mango-bytes/super-ability/free-coffee.png'
 CAT='superpowers'
-API="https://damp-hamlet-57878.herokuapp.com/"
+API="http://localhost:4741"
 URL_PATH="item"
 
 curl "${API}/${URL_PATH}" \

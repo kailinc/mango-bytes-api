@@ -18,10 +18,6 @@ const userSchema = new mongoose.Schema({
     type: Number,
     default: 0
   },
-  fourScreens: {
-    type: Boolean,
-    default: false
-  },
   JavaScript: {
     type: Number,
     default: 0,
