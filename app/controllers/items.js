@@ -21,27 +21,27 @@ const show = (req, res) => {
   })
 }
 
-const create = (req, res, next) => {
-  // req.body.cart.nested.stuff = 'ok'
-  const credentials = req.body.credentials
-  const item = {
-    name: credentials.name,
-    des: credentials.des,
-    img: credentials.img,
-    basePrice: credentials.basePrice,
-    attributes: credentials.attributes,
-    devCred: credentials.devCred,
-    category: credentials.category
-  }
-  Item.create(item)
-    .then(item => {
-      res.status(201)
-        .json({
-          item: item.toJSON()
-        })
-    })
-    .catch(next)
-}
+// const create = (req, res, next) => {
+//   // req.body.cart.nested.stuff = 'ok'
+//   const credentials = req.body.credentials
+//   const item = {
+//     name: credentials.name,
+//     des: credentials.des,
+//     img: credentials.img,
+//     basePrice: credentials.basePrice,
+//     attributes: credentials.attributes,
+//     devCred: credentials.devCred,
+//     category: credentials.category
+//   }
+//   Item.create(item)
+//     .then(item => {
+//       res.status(201)
+//         .json({
+//           item: item.toJSON()
+//         })
+//     })
+//     .catch(next)
+// }
 
 const destroy = (req, res, next) => {
   req.cart.remove()
@@ -51,9 +51,9 @@ const destroy = (req, res, next) => {
 
 module.exports = controller({
   index,
-  show,
-  create,
-  destroy
+  show
+  // create,
+  // destroy
 }, { before: [
   { method: setModel(Item), only: ['show'] }
 ] })

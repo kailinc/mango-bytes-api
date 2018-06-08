@@ -5,7 +5,7 @@ BASEPRICE=300
 DES='Angular is a structural framework for dynamic web apps. It lets you use HTML as your template language and lets you extend HTML syntax to express your components clearly and succinctly'
 IMG='https://s3.us-east-2.amazonaws.com/mango-bytes/languages-frameworks/angular.png'
 CAT='points'
-API="https://damp-hamlet-57878.herokuapp.com"
+API="http://localhost:4741"
 URL_PATH="item"
 
 curl "${API}/${URL_PATH}" \

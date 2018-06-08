@@ -25,7 +25,7 @@ curl "${API}/${URL_PATH}" \
         {
           "name": "JavaScript",
           "exp": "1"
-        },
+        }
       ],
       "category": "'"${CAT}"'",
       "des": "'"${DES}"'",

@@ -21,8 +21,8 @@ module.exports = require('lib/wiring/routes')
 // routes for items
 .get('/items', 'items#index')
 .get('/items/:id', 'items#show')
-.post('/item', 'items#create')
-.delete('/delete-item/:id', 'items#destroy')
+// .post('/item', 'items#create')
+// .delete('/delete-item/:id', 'items#destroy')
 
 // standards RESTful for carts
 .resources('carts')
